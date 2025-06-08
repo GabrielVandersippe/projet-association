@@ -1,0 +1,4 @@
+{
+  "question": "Click on all cells containing a dangerous balrog",
+  "answer": [true, true, true, true, true, true, false, true, true]
+}
