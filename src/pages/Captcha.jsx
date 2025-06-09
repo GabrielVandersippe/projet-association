@@ -1,4 +1,5 @@
 import { createSignal, For, onMount } from "solid-js";
+import { Navigate, useNavigate } from "@solidjs/router";
 
 function Cell({ isToggled = False, image }) {
   return (
@@ -36,6 +37,8 @@ function Captcha() {
   const [cells, setCells] = createSignal(Array(9).fill(false));
   const [isChecked, setIsChecked] = createSignal(false); //Pour la boite a cocher a la fin
 
+  const navigate = useNavigate();
+
   const randomInt = Math.floor(Math.random() * numberCaptchas);
   const images = Array.from(
     { length: 9 },
@@ -48,7 +51,7 @@ function Captcha() {
     const userAnswer = cells();
     const res = userAnswer.every((ans, index) => ans === info().answer[index]);
 
-    res ? console.log("OK") : location.reload();
+    res ? navigate("/homepage") : location.reload();
   }
 
   function clickCell(index) {
@@ -77,7 +80,7 @@ function Captcha() {
             checked={false}
             onChange={(e) => setIsChecked(e.target.checked)}
           />
-          <span class="text-sm text-gray-700 font-medium">I'm not an Elf</span>
+          <span class="text-sm text-gray-700 font-medium">I ain't no Elf</span>
           <img src="/recaptcha.png" class="h-8 w-8"></img>
         </label>
         <button

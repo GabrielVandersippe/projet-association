@@ -1,4 +1,4 @@
 {
-  "question": "Click on all cells containing gold",
+  "question": "Click on all cells containing them shiny gold coins",
   "answer": [false, false, false, true, true, true, true, true, true]
 }
