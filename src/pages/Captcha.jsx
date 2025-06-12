@@ -1,5 +1,5 @@
 import { createSignal, For, onMount } from "solid-js";
-import { Navigate, useNavigate } from "@solidjs/router";
+import { useNavigate } from "@solidjs/router";
 
 function Cell({ isToggled = False, image }) {
   return (

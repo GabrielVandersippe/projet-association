@@ -1,14 +1,43 @@
 import { createSignal } from "solid-js";
 
 function Homepage() {
+  const [isActive, setIsActive] = createSignal(true);
+
   return (
-    <div class="bg-gray-900 text-white">
+    <div
+      class={`bg-gray-900 text-white ${
+        isActive() ? "font-uncial" : "font-sans"
+      }`}
+    >
       <header class="bg-black py-12 shadow-md">
-        <div class="container mx-auto text-center">
-          <h1 class="text-4xl font-bold text-white">
-            Organisation pour le Traitement de l'Alcoolisme des Nains (OTAN)
-          </h1>
-          <p class="mt-2 text-xl text-white">Soignons le mal par le mal</p>
+        <div>
+          <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold text-white">
+              Organisation pour le Traitement de l'Alcoolisme des Nains (OTAN)
+            </h1>
+            <p class="mt-2 text-xl text-white">Soignons le mal par le mal</p>
+          </div>
+          <div class="container mx-auto mt-4 flex justify-start">
+            <label class="flex items-center space-x-3 bg-black px-4 py-2 rounded">
+              <input
+                type="checkbox"
+                class="sr-only peer"
+                checked={true}
+                onChange={(e) => setIsActive(e.target.checked)}
+              />
+              <div
+                class="relative w-11 h-6 bg-black peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 
+                  peer-checked:after:translate-x-full peer-checked:after:border-white 
+                  after:content-[''] after:absolute after:top-[2px] after:left-[2px] 
+                  after:bg-white after:border-gray-300 after:border after:rounded-full 
+                  after:h-5 after:w-5 after:transition-all dark:border-gray-600 
+                  peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"
+              ></div>
+              <span class="text-sm text-white font-medium">
+                Police Authentique
+              </span>
+            </label>
+          </div>
         </div>
       </header>
       <section class="container mx-auto px-4 py-12">
@@ -17,11 +46,11 @@ function Homepage() {
           Nains vivant reclus dans leur cavernes, nous avons pour ambition de
           venir en aide à tous nos frères ayant sombré dans l'alcoolisme. Notre
           avis ? Il suffit de proposer des boissons bonnes pour la santé et
-          riche en fer. (Approuvé par Gimli)
+          riches en fer. (Approuvé par Gimli)
         </p>
       </section>
       <section class="container mx-auto px-4 py-12">
-        <h2 class="text-2xl font-bold mb-6 text-center">Notre offres</h2>
+        <h2 class="text-2xl font-bold mb-6 text-center">Notre offre</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           <div>
             <img
@@ -29,9 +58,9 @@ function Homepage() {
               alt="Casse-Cailloux"
               class="mx-auto rounded-full mb-2"
             />
-            <h3 class="font-semibold">La casse-caillou</h3>
+            <h3 class="font-semibold">Le casse-cailloux</h3>
             <p class="text-sm text-gray-500">
-              Peut aussi désinfecter vos toilettes
+              Peut aussi désinfecter les haches de guerre
             </p>
           </div>
           <div>
@@ -41,7 +70,7 @@ function Homepage() {
               class="mx-auto rounded-full mb-2"
             />
             <h3 class="font-semibold">Le bute-dragons</h3>
-            <p class="text-sm text-gray-500">Ressentez la flamme</p>
+            <p class="text-sm text-gray-500">Réveillez la flamme du nain</p>
           </div>
           <div>
             <img
@@ -49,8 +78,8 @@ function Homepage() {
               alt="Cristal"
               class="mx-auto rounded-full mb-2"
             />
-            <h3 class="font-semibold">Le cristal brillant</h3>
-            <p class="text-sm text-gray-500">Alerte, émétophobes</p>
+            <h3 class="font-semibold">L'elfe en solution</h3>
+            <p class="text-sm text-gray-500">Enfin un usage adapté</p>
           </div>
         </div>
       </section>
