@@ -54,7 +54,17 @@ function Tabs({ tab }) {
       </Match>
 
       <Match when={tab() === "brothers"}>
-        <div>Nos Frères</div>
+        <div class="flex items-center bg-gray-800 rounded-full shadow-md px-4 py-2 gap-4 text-left hover:bg-gray-700 transition duration-200 m-16">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+            alt="Paul"
+            class="w-32 h-32 rounded-full object-cover"
+          />
+          <div class="text-white">
+            <h4 class="font-bold">Paul</h4>
+            <p class="text-sm text-gray-400">il est moche</p>
+          </div>
+        </div>
       </Match>
 
       <Match when={tab() === "offers"}>
