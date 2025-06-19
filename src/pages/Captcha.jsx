@@ -16,7 +16,7 @@ function Cell({ isToggled = False, image }) {
   );
 }
 
-function Grid({ images, answer, cells, clickCell }) {
+function Grid({ images, cells, clickCell }) {
   return (
     <div class="m-6 grid grid-cols-3 gap-1">
       <For each={cells()}>
