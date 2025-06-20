@@ -8,7 +8,9 @@ function Tabs({ tab }) {
       <Match when={tab() === "home"}>
         <div>
           <section class="container mx-auto px-4 py-12">
-            <h2 class="text-2xl font-bold mb-4 text-center">Qui sommes-nous ?</h2>
+            <h2 class="text-2xl font-bold mb-4 text-center">
+              Qui sommes-nous ?
+            </h2>
             <p class="max-w-2xl mx-auto text-center">
               Nains vivant reclus dans leur cavernes, nous avons pour ambition
               de venir en aide à tous nos frères ayant sombré dans l'alcoolisme.
@@ -36,10 +38,14 @@ function Tabs({ tab }) {
                 <p class="text-sm text-gray-500">
                   Peut aussi désinfecter les haches de guerre
                 </p>
-                <p class="text-sm text-gray-200">Cliquez pour obtenir la recette</p> 
+                <p class="text-sm text-gray-200">
+                  Cliquez pour obtenir la recette
+                </p>
                 {selectedDrink() === "casse" && (
                   <div class="mt-2 text-sm text-gray-300">
-                    <p><strong>Recette :</strong></p>
+                    <p>
+                      <strong>Recette :</strong>
+                    </p>
                     <ul class="list-disc list-inside">
                       <li>5 cl de rhum noir</li>
                       <li>2 cl de jus de fer fermenté</li>
@@ -52,7 +58,9 @@ function Tabs({ tab }) {
               {/* Bute-Dragons */}
               <div
                 onClick={() =>
-                  setSelectedDrink(selectedDrink() === "dragon" ? null : "dragon")
+                  setSelectedDrink(
+                    selectedDrink() === "dragon" ? null : "dragon"
+                  )
                 }
                 class="cursor-pointer"
               >
@@ -64,13 +72,17 @@ function Tabs({ tab }) {
                 <h3 class="font-semibold">Le bute-dragons</h3>
                 <p class="text-sm text-gray-500">Réveillez la flamme du nain</p>
 
-              <p class="text-sm text-gray-200">Cliquez pour obtenir la recette</p> 
+                <p class="text-sm text-gray-200">
+                  Cliquez pour obtenir la recette
+                </p>
                 {selectedDrink() === "dragon" && (
                   <div class="mt-2 text-sm text-gray-300">
-                    <p><strong>Recette :</strong></p>
+                    <p>
+                      <strong>Recette :</strong>
+                    </p>
                     <ul class="list-disc list-inside">
-                      <li>3 cl d’élixir de braise</li>
-                      <li>2 cl de jus d’orge rouge</li>
+                      <li>3 cl d'élixir de braise</li>
+                      <li>2 cl de jus d'orge rouge</li>
                       <li>Pincée de poudre de souffre</li>
                     </ul>
                   </div>
@@ -91,13 +103,17 @@ function Tabs({ tab }) {
                 />
                 <h3 class="font-semibold">L'elfe en solution</h3>
                 <p class="text-sm text-gray-500">Enfin un usage adapté</p>
-                <p class="text-sm text-gray-200">Cliquez pour obtenir la recette</p> 
+                <p class="text-sm text-gray-200">
+                  Cliquez pour obtenir la recette
+                </p>
                 {selectedDrink() === "elfe" && (
                   <div class="mt-2 text-sm text-gray-300">
-                    <p><strong>Recette :</strong></p>
+                    <p>
+                      <strong>Recette :</strong>
+                    </p>
                     <ul class="list-disc list-inside">
-                      <li>4 cl d’eau bénite du Valinor</li>
-                      <li>2 cl de sirop de fleur d’elfe</li>
+                      <li>4 cl d'eau bénite du Valinor</li>
+                      <li>2 cl de sirop de fleur d'elfe</li>
                       <li>Feuilles de Lembas macérées</li>
                     </ul>
                   </div>
@@ -165,12 +181,14 @@ function Homepage() {
                       }`}
                       onClick={() => setTab(t)}
                     >
-                      {{
-                        home: "Accueil",
-                        brothers: "Nos frères",
-                        offers: "Nos offres",
-                        contact: "Nous contacter",
-                      }[t]}
+                      {
+                        {
+                          home: "Accueil",
+                          brothers: "Nos frères",
+                          offers: "Nos offres",
+                          contact: "Nous contacter",
+                        }[t]
+                      }
                     </button>
                   </li>
                 ))}
