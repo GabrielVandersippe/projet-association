@@ -125,15 +125,55 @@ function Tabs({ tab }) {
       </Match>
 
       <Match when={tab() === "brothers"}>
-        <div class="flex items-center bg-gray-800 rounded-full shadow-md px-4 py-2 gap-4 text-left hover:bg-gray-700 transition duration-200 m-16">
+        {/*Tom*/}
+        <div class="flex items-center bg-gray-800 rounded-full shadow-md px-4 py-2 gap-4 text-left hover:bg-gray-700 transition duration-200 m-8">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
-            alt="Paul"
+            src="https://cdna.artstation.com/p/assets/images/images/039/364/500/large/tomasz-chistowski-untitled-5.jpg?1625684091"
+            alt="Tom"
             class="w-32 h-32 rounded-full object-cover"
           />
           <div class="text-white">
-            <h4 class="font-bold">Paul</h4>
-            <p class="text-sm text-gray-400">il est moche</p>
+            <h4 class="font-bold">Tåm-bak</h4>
+            <p class="text-sm text-gray-400">Nain très stylé</p>
+          </div>
+        </div>
+
+        {/*Eliott*/}
+        <div class="flex items-center bg-gray-800 rounded-full shadow-md px-4 py-2 gap-4 text-left hover:bg-gray-700 transition duration-200 m-8">
+          <img
+            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e53653d9-be9f-4d43-849f-efcfe98a9726/dblmln3-9e3c4b3f-5079-40b4-8599-b6bc0dcfd16d.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U1MzY1M2Q5LWJlOWYtNGQ0My04NDlmLWVmY2ZlOThhOTcyNlwvZGJsbWxuMy05ZTNjNGIzZi01MDc5LTQwYjQtODU5OS1iNmJjMGRjZmQxNmQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0v7b3rX7NGPolLqg0I87QR3tpHATE0L6xm6vsjyORJI"
+            alt="Eliott"
+            class="w-32 h-32 rounded-full object-cover"
+          />
+          <div class="text-white">
+            <h4 class="font-bold">Elliåt Føyell</h4>
+            <p class="text-sm text-gray-400">Nain très cool</p>
+          </div>
+        </div>
+
+        {/*Basile*/}
+        <div class="flex items-center bg-gray-800 rounded-full shadow-md px-4 py-2 gap-4 text-left hover:bg-gray-700 transition duration-200 m-8">
+          <img
+            src="https://www.worldanvil.com/uploads/images/34ca131a38b9d3651646d4e18e15ccc6.jpg"
+            alt="Basile"
+            class="w-32 h-32 rounded-full object-cover"
+          />
+          <div class="text-white">
+            <h4 class="font-bold">Bøsil Dur-Mâh</h4>
+            <p class="text-sm text-gray-400">Nain très fort</p>
+          </div>
+        </div>
+
+        {/*Gabriel*/}
+        <div class="flex items-center bg-gray-800 rounded-full shadow-md px-4 py-2 gap-4 text-left hover:bg-gray-700 transition duration-200 m-8">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8967jd1L9ypnR-pFwIegJfT6lCrWwaPBUtA&s"
+            alt="Gabriel"
+            class="w-32 h-32 rounded-full object-cover"
+          />
+          <div class="text-white">
+            <h4 class="font-bold">Gâh-Bryell Vøn Daer-Sæp</h4>
+            <p class="text-sm text-gray-400">Nain très nain</p>
           </div>
         </div>
       </Match>
