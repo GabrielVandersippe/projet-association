@@ -223,7 +223,7 @@ function Tabs({ tab }) {
 
 
       <Match when={tab() === "contact"}>
-        <div>Nous Contacter</div>
+        <Contact />
       </Match>
     </Switch>
   );
@@ -306,5 +306,98 @@ function Homepage() {
     </div>
   );
 }
+
+function Contact() {
+  const [name, setName] = createSignal("");
+  const [email, setEmail] = createSignal("");
+  const [message, setMessage] = createSignal("");
+  const [submitted, setSubmitted] = createSignal(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Ici tu pourrais ajouter une requête fetch/post vers un backend
+    setSubmitted(true);
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
+  return (
+    <section class="container mx-auto px-4 py-12 max-w-lg">
+      <h2 class="text-2xl font-bold mb-6 text-center">Nous Contacter</h2>
+
+      {!submitted() ? (
+        <form onSubmit={handleSubmit} class="space-y-6">
+          <div>
+            <label for="name" class="block mb-2 text-sm font-medium text-gray-300">
+              Nom
+            </label>
+            <input
+              id="name"
+              type="text"
+              required
+              value={name()}
+              onInput={(e) => setName(e.target.value)}
+              class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+              placeholder="Votre nom"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-300">
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              required
+              value={email()}
+              onInput={(e) => setEmail(e.target.value)}
+              class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+              placeholder="votre.email@exemple.com"
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block mb-2 text-sm font-medium text-gray-300">
+              Message
+            </label>
+            <textarea
+              id="message"
+              required
+              value={message()}
+              onInput={(e) => setMessage(e.target.value)}
+              rows="4"
+              class="w-full px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-600"
+              placeholder="Votre message..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-blue-600 hover:bg-blue-700 transition-colors text-white font-bold py-2 rounded"
+          >
+            Envoyer
+          </button>
+        </form>
+      ) : (
+        <div class="text-center">
+        <h3 class="text-xl font-semibold text-green-400 mb-4">
+          Merci pour votre message, noble nain !
+        </h3>
+        <p class="text-gray-300 mb-6">
+          Nous reviendrons vers vous plus vite qu’un marteau sur une enclume.
+        </p>
+        <img
+          src="https://files.idyllic.app/files/static/2537128?width=1080&optimizer=image"
+          alt="Nain messager"
+          class="mx-auto rounded-full shadow-lg w-48 h-48 object-cover"
+        />
+      </div>
+      )}
+    </section>
+  );
+}
+
 
 export default Homepage;
