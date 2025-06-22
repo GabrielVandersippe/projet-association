@@ -179,8 +179,48 @@ function Tabs({ tab }) {
       </Match>
 
       <Match when={tab() === "offers"}>
-        <div>Nos Offres</div>
+        <section class="container mx-auto px-4 py-12">
+          <h2 class="text-2xl font-bold mb-6 text-center">Nos Offres Spéciales</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            {/* Offre 1 */}
+            <div class="bg-gray-800 p-6 rounded-lg shadow hover:bg-gray-700 transition duration-200">
+              <h3 class="text-xl font-semibold mb-2">Pack "Forge Intérieure"</h3>
+              <p class="text-gray-400 mb-4">Un mois de boissons détox à base de minerai</p>
+              <ul class="text-sm text-gray-300 mb-4 list-disc list-inside">
+                <li>30 fioles de jus de fer</li>
+                <li>Accès à la salle de cri primal</li>
+                <li>Consultation avec un druide nain</li>
+              </ul>
+              <p class="font-bold text-yellow-400">29,99 ⚒️</p>
+            </div>
+
+            {/* Offre 2 */}
+            <div class="bg-gray-800 p-6 rounded-lg shadow hover:bg-gray-700 transition duration-200">
+              <h3 class="text-xl font-semibold mb-2">Coffret "Brise-Bitume"</h3>
+              <p class="text-gray-400 mb-4">Un assortiment explosif pour les fêtes tribales</p>
+              <ul class="text-sm text-gray-300 mb-4 list-disc list-inside">
+                <li>6 bouteilles de casse-cailloux</li>
+                <li>Torches gratuites pour l’ambiance</li>
+                <li>Casque de fête inclus</li>
+              </ul>
+              <p class="font-bold text-yellow-400">44,90 ⚒️</p>
+            </div>
+
+            {/* Offre 3 */}
+            <div class="bg-gray-800 p-6 rounded-lg shadow hover:bg-gray-700 transition duration-200">
+              <h3 class="text-xl font-semibold mb-2">Abonnement "Mines Saines"</h3>
+              <p class="text-gray-400 mb-4">Un programme longue durée pour la sobriété naine</p>
+              <ul class="text-sm text-gray-300 mb-4 list-disc list-inside">
+                <li>Livraison mensuelle de potions vitales</li>
+                <li>Accès aux bains de lave régénérants</li>
+                <li>Assistance psychologique par corbeau messager</li>
+              </ul>
+              <p class="font-bold text-yellow-400">19,99 ⚒️ / mois</p>
+            </div>
+          </div>
+        </section>
       </Match>
+
 
       <Match when={tab() === "contact"}>
         <div>Nous Contacter</div>

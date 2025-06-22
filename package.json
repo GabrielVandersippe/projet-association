@@ -9,8 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@motionone/solid": "^10.16.4",
     "@solidjs/router": "^0.15.3",
     "@tailwindcss/vite": "^4.1.8",
+    "framer-motion": "^12.18.1",
+    "lucide-react": "^0.522.0",
+    "lucide-solid": "^0.522.0",
     "solid-js": "^1.9.7",
     "tailwindcss": "^4.1.8"
   },
