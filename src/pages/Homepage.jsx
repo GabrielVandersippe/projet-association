@@ -180,12 +180,18 @@ function Tabs({ tab }) {
 
       <Match when={tab() === "offers"}>
         <section class="container mx-auto px-4 py-12">
-          <h2 class="text-2xl font-bold mb-6 text-center">Nos Offres Spéciales</h2>
+          <h2 class="text-2xl font-bold mb-6 text-center">
+            Nos Offres Spéciales
+          </h2>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             {/* Offre 1 */}
             <div class="bg-gray-800 p-6 rounded-lg shadow hover:bg-gray-700 transition duration-200">
-              <h3 class="text-xl font-semibold mb-2">Pack "Forge Intérieure"</h3>
-              <p class="text-gray-400 mb-4">Un mois de boissons détox à base de minerai</p>
+              <h3 class="text-xl font-semibold mb-2">
+                Pack "Forge Intérieure"
+              </h3>
+              <p class="text-gray-400 mb-4">
+                Un mois de boissons détox à base de minerai
+              </p>
               <ul class="text-sm text-gray-300 mb-4 list-disc list-inside">
                 <li>30 fioles de jus de fer</li>
                 <li>Accès à la salle de cri primal</li>
@@ -197,7 +203,9 @@ function Tabs({ tab }) {
             {/* Offre 2 */}
             <div class="bg-gray-800 p-6 rounded-lg shadow hover:bg-gray-700 transition duration-200">
               <h3 class="text-xl font-semibold mb-2">Coffret "Brise-Bitume"</h3>
-              <p class="text-gray-400 mb-4">Un assortiment explosif pour les fêtes tribales</p>
+              <p class="text-gray-400 mb-4">
+                Un assortiment explosif pour les fêtes tribales
+              </p>
               <ul class="text-sm text-gray-300 mb-4 list-disc list-inside">
                 <li>6 bouteilles de casse-cailloux</li>
                 <li>Torches gratuites pour l’ambiance</li>
@@ -208,8 +216,12 @@ function Tabs({ tab }) {
 
             {/* Offre 3 */}
             <div class="bg-gray-800 p-6 rounded-lg shadow hover:bg-gray-700 transition duration-200">
-              <h3 class="text-xl font-semibold mb-2">Abonnement "Mines Saines"</h3>
-              <p class="text-gray-400 mb-4">Un programme longue durée pour la sobriété naine</p>
+              <h3 class="text-xl font-semibold mb-2">
+                Abonnement "Mines Saines"
+              </h3>
+              <p class="text-gray-400 mb-4">
+                Un programme longue durée pour la sobriété naine
+              </p>
               <ul class="text-sm text-gray-300 mb-4 list-disc list-inside">
                 <li>Livraison mensuelle de potions vitales</li>
                 <li>Accès aux bains de lave régénérants</li>
@@ -220,7 +232,6 @@ function Tabs({ tab }) {
           </div>
         </section>
       </Match>
-
 
       <Match when={tab() === "contact"}>
         <Contact />
@@ -329,7 +340,10 @@ function Contact() {
       {!submitted() ? (
         <form onSubmit={handleSubmit} class="space-y-6">
           <div>
-            <label for="name" class="block mb-2 text-sm font-medium text-gray-300">
+            <label
+              for="name"
+              class="block mb-2 text-sm font-medium text-gray-300"
+            >
               Nom
             </label>
             <input
@@ -344,7 +358,10 @@ function Contact() {
           </div>
 
           <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-300">
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-300"
+            >
               Email
             </label>
             <input
@@ -359,7 +376,10 @@ function Contact() {
           </div>
 
           <div>
-            <label for="message" class="block mb-2 text-sm font-medium text-gray-300">
+            <label
+              for="message"
+              class="block mb-2 text-sm font-medium text-gray-300"
+            >
               Message
             </label>
             <textarea
@@ -382,22 +402,21 @@ function Contact() {
         </form>
       ) : (
         <div class="text-center">
-        <h3 class="text-xl font-semibold text-green-400 mb-4">
-          Merci pour votre message, noble nain !
-        </h3>
-        <p class="text-gray-300 mb-6">
-          Nous reviendrons vers vous plus vite qu’un marteau sur une enclume.
-        </p>
-        <img
-          src="https://files.idyllic.app/files/static/2537128?width=1080&optimizer=image"
-          alt="Nain messager"
-          class="mx-auto rounded-full shadow-lg w-48 h-48 object-cover"
-        />
-      </div>
+          <h3 class="text-xl font-semibold text-green-400 mb-4">
+            Merci pour votre message, noble nain !
+          </h3>
+          <p class="text-gray-300 mb-6">
+            Nous reviendrons vers vous plus vite qu'un marteau sur une enclume.
+          </p>
+          <img
+            src="https://files.idyllic.app/files/static/2537128?width=1080&optimizer=image"
+            alt="Nain messager"
+            class="mx-auto rounded-full shadow-lg w-48 h-48 object-cover"
+          />
+        </div>
       )}
     </section>
   );
 }
-
 
 export default Homepage;
