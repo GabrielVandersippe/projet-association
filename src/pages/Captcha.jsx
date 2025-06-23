@@ -67,33 +67,40 @@ function Captcha() {
   });
 
   return (
-    <div class="flex h-screen flex-col font-mono items-center justify-center bg-gray-100">
-      <div class="flex flex-col h-19/20 border-2 border-gray-300 w-2/5 bg-gray-200 rounded-xl items-center justify-center">
-        <h1 class="m-8 mb-4 text-xl font-bold text-center break-words whitespace-normal">
+    <div class="flex h-screen flex-col font-mono items-center justify-center bg-gray-100 p-4">
+      <div class="flex flex-col w-full max-w-md border-2 border-gray-300 bg-gray-200 rounded-xl items-center justify-center p-4">
+        <h1 class="mb-4 text-xl font-bold text-center break-words whitespace-normal">
           {info() ? info().question : "Loading..."}
-        </h1>{" "}
+        </h1>
+
         <Grid images={images} cells={cells} clickCell={clickCell} />
-        <label class="flex items-center space-x-2 cursor-pointer select-none p-4 rounded border-2 border-gray-300 bg-gray-100">
-          <input
-            type="checkbox"
-            class="h-5 w-5 text-blue-600 border-gray-300 rounded"
-            checked={false}
-            onChange={(e) => setIsChecked(e.target.checked)}
-          />
-          <span class="text-sm text-gray-700 font-medium">I ain't no Elf</span>
-          <img src="/recaptcha.png" class="h-8 w-8"></img>
-        </label>
-        <button
-          class={`px-4 py-2 m-3 text-white text-sm rounded transition ${
-            isChecked()
-              ? "bg-blue-600 hover:bg-blue-700 cursor-pointer"
-              : "bg-gray-400 cursor-not-allowed"
-          }`}
-          disabled={!isChecked()}
-          onClick={submitCaptcha}
-        >
-          Submit
-        </button>
+
+        <div class="w-full flex justify-center">
+          <label class="flex items-center space-x-2 cursor-pointer select-none p-4 rounded border border-gray-300 bg-gray-100 text-sm">
+            <input
+              type="checkbox"
+              class="h-4 w-4 text-blue-600 border-gray-300 rounded"
+              checked={false}
+              onChange={(e) => setIsChecked(e.target.checked)}
+            />
+            <span class="text-gray-700 font-medium">I ain't no Elf</span>
+            <img src="/recaptcha.png" class="h-6 w-6" alt="captcha" />
+          </label>
+        </div>
+
+        <div class="w-full flex justify-center">
+          <button
+            class={`px-3 py-1.5 mt-4 text-white text-sm rounded transition ${
+              isChecked()
+                ? "bg-blue-600 hover:bg-blue-700 cursor-pointer"
+                : "bg-gray-400 cursor-not-allowed"
+            }`}
+            disabled={!isChecked()}
+            onClick={submitCaptcha}
+          >
+            Submit
+          </button>
+        </div>
       </div>
     </div>
   );

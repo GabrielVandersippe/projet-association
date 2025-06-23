@@ -12,10 +12,11 @@ function Tabs({ tab }) {
               Qui sommes-nous ?
             </h2>
             <p class="max-w-2xl mx-auto text-center">
-              Nains et mineurs vivant reclus dans leur cavernes profondes, surnommés parfois FAO, nous avons pour ambition
-              de venir en aide à tous nos frères ayant sombré dans l'alcoolisme.
-              Notre avis ? Il suffit de proposer des boissons bonnes pour la
-              santé et riches en fer. (Approuvé par Gimli)
+              Nains et mineurs vivant reclus dans leur cavernes profondes,
+              surnommés parfois FAO, nous avons pour ambition de venir en aide à
+              tous nos frères ayant sombré dans l'alcoolisme. Notre avis ? Il
+              suffit de proposer des boissons bonnes pour la santé et riches en
+              fer. (Approuvé par Gimli)
             </p>
           </section>
 
@@ -38,7 +39,7 @@ function Tabs({ tab }) {
                 <p class="text-sm text-gray-500">
                   Peut aussi désinfecter les haches de guerre
                 </p>
-                <p class="text-sm text-gray-200">
+                <p class="text-sm text-gray-200 hover:text-blue-500 m-4">
                   Cliquez pour obtenir la recette
                 </p>
                 {selectedDrink() === "casse" && (
@@ -72,7 +73,7 @@ function Tabs({ tab }) {
                 <h3 class="font-semibold">Le bute-dragons</h3>
                 <p class="text-sm text-gray-500">Réveillez la flamme du nain</p>
 
-                <p class="text-sm text-gray-200">
+                <p class="text-sm text-gray-200 hover:text-blue-500 m-4">
                   Cliquez pour obtenir la recette
                 </p>
                 {selectedDrink() === "dragon" && (
@@ -103,7 +104,7 @@ function Tabs({ tab }) {
                 />
                 <h3 class="font-semibold">L'elfe en solution</h3>
                 <p class="text-sm text-gray-500">Enfin un usage adapté</p>
-                <p class="text-sm text-gray-200">
+                <p class="text-sm text-gray-200 hover:text-blue-500 m-4">
                   Cliquez pour obtenir la recette
                 </p>
                 {selectedDrink() === "elfe" && (
@@ -261,10 +262,11 @@ function Homepage() {
               <h1 class="text-4xl font-bold text-white">
                 Organisation pour le Traitement de l'Alcoolisme des Nains (OTAN)
               </h1>
-              <p class="mt-2 text-x l italic text-gray-400">Soignons le mal par le mal</p>
+              <p class="mt-2 text-x l italic text-gray-400">
+                Soignons le mal par le mal
+              </p>
             </div>
           </div>
-
 
           <div class="container mx-auto mt-4 flex justify-between">
             <div class="flex-grow text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
@@ -320,7 +322,7 @@ function Homepage() {
 
       <footer class="bg-black py-6 text-center text-white">
         <p>&copy; 2025 OTAN. Tous droits réservés.</p>
-        <p> L'abus d'alcool est dangereux pour la santé</p>
+        <p class="text-gray-500">L'abus d'alcool est dangereux pour la santé</p>
       </footer>
     </div>
   );
