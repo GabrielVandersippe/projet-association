@@ -12,7 +12,7 @@ function Tabs({ tab }) {
               Qui sommes-nous ?
             </h2>
             <p class="max-w-2xl mx-auto text-center">
-              Nains vivant reclus dans leur cavernes, nous avons pour ambition
+              Nains et mineurs vivant reclus dans leur cavernes profondes, surnommés parfois FAO, nous avons pour ambition
               de venir en aide à tous nos frères ayant sombré dans l'alcoolisme.
               Notre avis ? Il suffit de proposer des boissons bonnes pour la
               santé et riches en fer. (Approuvé par Gimli)
@@ -313,6 +313,7 @@ function Homepage() {
 
       <footer class="bg-black py-6 text-center text-white">
         <p>&copy; 2025 OTAN. Tous droits réservés.</p>
+        <p> L'abus d'alcool est dangereux pour la santé</p>
       </footer>
     </div>
   );
