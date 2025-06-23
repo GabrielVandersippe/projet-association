@@ -252,12 +252,19 @@ function Homepage() {
     >
       <header class="bg-black py-12 shadow-md">
         <div>
-          <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold text-white">
-              Organisation pour le Traitement de l'Alcoolisme des Nains (OTAN)
-            </h1>
-            <p class="mt-2 text-xl text-white">Soignons le mal par le mal</p>
+          <div class="container mx-auto px-4 py-6 flex items-center">
+            <div class="ml-4">
+              <img src="beer.png" class="h-24 w-auto rounded-full shadow-lg" />
+            </div>
+
+            <div class="ml-6">
+              <h1 class="text-4xl font-bold text-white">
+                Organisation pour le Traitement de l'Alcoolisme des Nains (OTAN)
+              </h1>
+              <p class="mt-2 text-x l italic text-gray-400">Soignons le mal par le mal</p>
+            </div>
           </div>
+
 
           <div class="container mx-auto mt-4 flex justify-between">
             <div class="flex-grow text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
